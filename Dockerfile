@@ -22,7 +22,7 @@ RUN cd street-view-screenshots && npm install
 RUN cd database && npm install
 
 COPY --chown=aoe:aoe google-cloud-credentials.json ./
-ENV SERVICE_KEY=/aoe/google-cloud-credentials.json
+ENV SERVICE_KEY=/home/aoe/google-cloud-credentials.json
 
 RUN mkdir /home/aoe/run-daily
 WORKDIR /home/aoe/run-daily
