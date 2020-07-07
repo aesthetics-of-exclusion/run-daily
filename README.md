@@ -14,3 +14,7 @@ To deploy the function, run:
     docker build -t eu.gcr.io/streetswipe-aoe/run-daily .
     docker push eu.gcr.io/streetswipe-aoe/run-daily
     gcloud run deploy --image eu.gcr.io/streetswipe-aoe/run-daily --platform managed --memory 2Gi
+
+To run bash in the Docker container locally, run:
+
+    docker run -it eu.gcr.io/streetswipe-aoe/run-daily bash

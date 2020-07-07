@@ -15,10 +15,12 @@ USER aoe
 
 RUN git clone https://github.com/aesthetics-of-exclusion/mask-facades.git \
   && git clone https://github.com/aesthetics-of-exclusion/street-view-screenshots.git \
+  && git clone https://github.com/aesthetics-of-exclusion/faillisementen.git \
   && git clone https://github.com/aesthetics-of-exclusion/database.git
 
 RUN cd mask-facades && npm install
 RUN cd street-view-screenshots && npm install
+RUN cd faillisementen && npm install
 RUN cd database && npm install
 
 COPY --chown=aoe:aoe google-cloud-credentials.json ./
